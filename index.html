@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="manifest" href="./manifest.json">
     <meta name="theme-color" content="#060b1a">
+    <meta name="description"
+      content="Central local para acesso e gerenciamento de uma agenda de tarefas diretamente no navegador."> 
     <title>Cento de Tarefas by Center Soft Inc.®</title>
     <link rel="icon" href="icon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
@@ -894,7 +896,9 @@
 </script>
 <script>
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("./sw.js");
+  navigator.serviceWorker.register("/agendador-de-tarefas/sw.js", {
+    scope: "/agendador-de-tarefas/"
+  });
 }
 </script>
 </body>
